@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			user-select: none;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			width: 100vw;
+			min-height: 100vh;
+			font-family: 'Roboto', sans-serif;
+			background: #333;
+		}
+		a{
+			color: crimson;
+			text-decoration: none;
+			font-size: 1.3em;
+			margin: 1.2em;
+		}
+		a:hover{
+			color: crimson;
+		}
+		h1{
+			display: inline-block;
+			margin-left: 1em;
+			border-bottom: 5px solid #888;
+			color: #aaa;
+			margin-bottom: 0.6em;
+		}
+		nav{
+			background-color: #222;
+			padding: 1em;
+			margin-bottom: 2em;
+			box-shadow: 0 0 1em black;
+			cursor: default;
+		}
+		p{
+			color: #999;
+			font-size: 1.2em;
+			margin-left: 2em;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="/">Home</a>
+		<% if(user){ %>
+			<a href="/user/profile">Profile</a>
+			<a href="/auth/logout">Logout</a>
+		<%} else{ %>
+			<a href="/auth/google">Login</a>
+		<% } %>
+	</nav>
+	<h1>Home</h1>
+	<p>Welcome to basic google OAuth implementation</p>
+</body>
+</html>
